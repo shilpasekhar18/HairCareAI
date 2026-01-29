@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HaircareAI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">HaircareAI</div>
+    </header>
+
+    <!-- Main Card -->
+    <main class="container">
+        <h1>Hair Fall Analysis</h1>
+        <p class="subtitle">
+            Answer a few questions to understand your hair fall risk and get personalized suggestions.
+        </p>
+
+        <form id="hairForm">
+            <input id="age" type="number" placeholder="Age" required>
+
+            <select id="genetics">
+                <option value="yes">Genetics: Yes</option>
+                <option value="no">Genetics: No</option>
+            </select>
+
+            <select id="stress">
+                <option value="low">Low Stress</option>
+                <option value="medium">Medium Stress</option>
+                <option value="high">High Stress</option>
+            </select>
+
+            <input id="nutrition" placeholder="Nutritional Deficiency (e.g. Iron, Vitamin D)">
+
+            <select id="habits">
+                <option value="yes">Poor Hair Care: Yes</option>
+                <option value="no">Poor Hair Care: No</option>
+            </select>
+
+            <button type="submit">Analyze</button>
+        </form>
+
+        <div id="result"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
