@@ -18,7 +18,7 @@ feature_names = joblib.load(feature_names_path)
 
 app = Flask(__name__)
 
-# ✅ ENABLE CORS (THIS IS THE FIX)
+# Enable CORS
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route("/predict", methods=["POST"])
@@ -77,4 +77,5 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)
+    port = int(os.environ.get("PORT", 5001))
+    app.run(host="0.0.0.0", port=port)
