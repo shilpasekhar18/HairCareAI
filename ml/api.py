@@ -4,6 +4,14 @@ import pandas as pd
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
+@app.route("/")
+def home():
+    return jsonify({
+        "status": "HaircareAI API is running",
+        "endpoint": "/predict",
+        "method": "POST"
+    })
+
 # Paths
 BASE_DIR = os.path.dirname(__file__)
 MODEL_DIR = os.path.join(BASE_DIR, "model")
