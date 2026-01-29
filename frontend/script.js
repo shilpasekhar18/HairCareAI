@@ -10,11 +10,17 @@ document.getElementById("hairForm").addEventListener("submit", async (e) => {
     };
 
     try {
-        const response = await fetch("http://127.0.0.1:5001/predict", {
+        const response = await fetch("https://haircareai.onrender.com/predict", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: {
+                "Content-Type": "application/json"
+            },
             body: JSON.stringify(data)
         });
+
+        if (!response.ok) {
+            throw new Error("API error");
+        }
 
         const result = await response.json();
 
@@ -27,5 +33,6 @@ document.getElementById("hairForm").addEventListener("submit", async (e) => {
         `;
     } catch (err) {
         document.getElementById("result").innerText = "API connection failed";
+        console.error(err);
     }
 });
