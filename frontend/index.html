@@ -9,44 +9,44 @@
 
 <body>
 
-    <!-- Navbar -->
+    <!-- Top bar -->
     <header class="navbar">
         <div class="logo">HaircareAI</div>
     </header>
 
-    <!-- Main Card -->
-    <main class="container">
+    <!-- Main card -->
+    <div class="card">
         <h1>Hair Fall Analysis</h1>
-        <p class="subtitle">
-            Answer a few questions to understand your hair fall risk and get personalized suggestions.
-        </p>
 
         <form id="hairForm">
             <input id="age" type="number" placeholder="Age" required>
 
             <select id="genetics">
-                <option value="yes">Genetics: Yes</option>
-                <option value="no">Genetics: No</option>
+                <option value="">Genetics</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
             </select>
 
             <select id="stress">
-                <option value="low">Low Stress</option>
-                <option value="medium">Medium Stress</option>
-                <option value="high">High Stress</option>
+                <option value="">Stress Level</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
             </select>
 
-            <input id="nutrition" placeholder="Nutritional Deficiency (e.g. Iron, Vitamin D)">
+            <input id="nutrition" placeholder="Nutritional Deficiency (e.g Iron)">
 
             <select id="habits">
-                <option value="yes">Poor Hair Care: Yes</option>
-                <option value="no">Poor Hair Care: No</option>
+                <option value="">Poor Hair Care Habits</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
             </select>
 
             <button type="submit">Analyze</button>
         </form>
 
         <div id="result"></div>
-    </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
